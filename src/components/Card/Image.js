@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-export default function CardImage({ url, title, refID }) {
+export default function CardImage({ url, title, refID, from }) {
   const Image = styled.div`
     background-image: url("${url}");
     height: 300px;
@@ -17,7 +17,7 @@ export default function CardImage({ url, title, refID }) {
   const navigate = useNavigate();
 
   const getByID = () => {
-    navigate(`/id?reference=${refID}`);
+    navigate(`/id?reference=${refID}&from=${from}`);
   };
 
   return (
