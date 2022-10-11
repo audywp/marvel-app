@@ -8,7 +8,9 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center h-20">
       <div>
-        <h1 className="text-4xl tracking-wider">Marvel</h1>
+        <Link to="/" className="text-4xl tracking-wider">
+          MARVEL
+        </Link>
       </div>
       <div className="w-1/2 flex justify-evenly">
         {routes.map((route, index) => (
