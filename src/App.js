@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import PagesByID from "./pages/PagesByID";
 import { routeList } from "./routes";
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
             key={idx.toString()}
           />
         ))}
+
+        <Route path="/id" element={<PagesByID />} />
       </Routes>
     </div>
   );
