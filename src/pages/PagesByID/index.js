@@ -32,7 +32,7 @@ export default function PagesByID() {
     <div className="bg-white">
       <div className="pt-6">
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl h-96 lg:gap-x-8 lg:px-8">
-          <div className="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+          <div className="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg lg:block">
             <img
               src={`${detailData?.thumbnail?.path}.${detailData?.thumbnail?.extension}`}
               alt="Two each of gray, white, and black shirts laying flat."

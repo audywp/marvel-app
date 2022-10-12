@@ -9,6 +9,7 @@ export const useGetData = (endpoint, detail, target) => {
   const [isEnded, setIsEnded] = useState(false);
   const [dataOpsi, setDataOpsi] = useState({});
   const [dataChar, setdataChar] = useState({});
+  const [isFailed, setIsFaied] = useState(false);
 
   const getData = async (limit = 20) => {
     try {
@@ -33,8 +34,11 @@ export const useGetData = (endpoint, detail, target) => {
             setdataChar(story);
           }
         }
+      } else {
+        setIsFaied(true);
       }
     } catch (error) {
+      setIsFaied(true);
       console.log(error);
     } finally {
       setLoading(false);
@@ -70,5 +74,6 @@ export const useGetData = (endpoint, detail, target) => {
     loadMore,
     loadingLoadMore,
     isEnded,
+    isFailed,
   };
 };
